@@ -17,6 +17,7 @@
 .navbar h1 {
     cursor: initial;
     margin: 0 auto;
+    font-size: 24px;
 }
 
 .nav-menu {
