@@ -1,59 +1,16 @@
 import React from 'react';
 import Box from "../component/box/Box";
 import {Grid} from "@mui/material";
+import {allData} from "../data/data";
 
-const data = {
-    "content": {
-        "Ecrans": [
-            {
-                "ref": "xxxx",
-                "conso": 15
-            },
-            {
-                "ref": "yyyyy",
-                "conso": 40
-            }
-        ],
-        "Bonjour": [
-            {
-                "ref": "xxxx",
-                "conso": 15
-            },
-            {
-                "ref": "yyyyy",
-                "conso": 40
-            }
-        ],
-        "Salut": [
-            {
-                "ref": "xxxx",
-                "conso": 15
-            },
-            {
-                "ref": "yyyyy",
-                "conso": 40
-            }
-        ],
-        "Voitures": [
-            {
-                "ref": "vvvv",
-                "conso": 45
-            },
-            {
-                "ref": "pppp",
-                "conso": 9
-            }
-        ]
-    }
-}
 
 const Consumption = () => {
     return (
         <div className='consumption'>
-            <Grid container>
+            <Grid container style={{margin: '8%'}}>
                 {
-                    Object.keys(data.content).map((t, i) => (
-                        <Box key={i} title={t} data={data.content[t]}/>
+                    allData.map((v, i) => (
+                        <Box key={i} title={Object.keys(v)[0]} data={Object.values(v)[0]}/>
                     ))
                 }
             </Grid>

@@ -8,21 +8,15 @@ export default function ItemSelector(props) {
     const [conso, setConso] = useState(0)
     const [quantity, setQuantity] = useState(0)
 
-    const [total, setTotal] = useState(0)
+    const [totalSelector, setTotalSelector] = useState(0)
 
     useEffect(() => {
-        console.log('conso', conso)
-        console.log('qty', quantity)
-        setTotal(conso * quantity)
+        setTotalSelector(conso * quantity)
     }, [conso, quantity])
 
     useEffect(() => {
-        props.setTotalConsoBox(total)
-    }, [total])
-
-    useEffect(() => {
-        console.log('yo')
-    }, [])
+        props.setTotalConsoBox(totalSelector)
+    }, [totalSelector])
 
     return (
         <div style={styles.selectContainer}>
@@ -40,7 +34,8 @@ const styles = {
     selectContainer: {
         display: 'flex',
         justifyContent: 'space-evenly',
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingBottom: 15
 
     },
     container: {

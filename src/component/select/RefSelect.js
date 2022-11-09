@@ -7,7 +7,7 @@ export default function RefSelect(props) {
 
     return (
         <>
-            <FormControl sx={{minWidth: 120}}>
+            <FormControl sx={{minWidth: 150, maxWidth: 170}}>
                 <InputLabel id="demo-simple-select-label">Référence</InputLabel>
                 <Select
                     labelId="demo-simple-select-label"
@@ -18,12 +18,10 @@ export default function RefSelect(props) {
                         props.setConso(v.target.value)
                     }}
                 >
-                    <MenuItem value={0}>
-                        <em>None</em>
-                    </MenuItem>
+                    <MenuItem value={0}/>
                     {
                         props.refData.map((v, i) => (
-                            <MenuItem key={i} value={v.conso}>{v.ref}</MenuItem>
+                            <MenuItem style={{color: 'black'}} key={i} value={parseInt(v.CO2)}>{v.reference}</MenuItem>
                         ))
                     }
                 </Select>
