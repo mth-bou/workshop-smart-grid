@@ -8,15 +8,12 @@
 }
 
 body {
-  background-color: #f0ffbf;
+  background-color: #ffffff;
   width: 100%;
 }
 
 .home, .consumption {
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
+  margin: 5rem auto;
   font-size: 3rem;
 }
 

@@ -1,5 +1,5 @@
 import * as Icons from '@mui/icons-material';
-import Home from "../../pages/Home";
+import Home from "../../pages/home/Home";
 import Consumption from "../../pages/Consumption";
 
 const SidebarRoutes = [
