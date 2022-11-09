@@ -3,6 +3,7 @@ import Box from "../../component/box/Box";
 import {Grid} from "@mui/material";
 import {allData} from "../../data/data";
 import './Consumption.css';
+import legend from './img/légende-co2.png';
 
 
 const Consumption = () => {
@@ -27,7 +28,11 @@ const Consumption = () => {
             <h2>Résultat de votre empreinte carbone</h2>
 
             <div className="carbon-footprint-result">
-                <p>{totalSum}<span>kg CO2 / an</span></p>
+                <p>{totalSum}<span>kg CO² / an</span></p>
+            </div>
+
+            <div className="img-legende-co2">
+                <img src={legend} alt="legende CO2" />
             </div>
         </div>
     );

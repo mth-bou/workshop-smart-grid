@@ -23,3 +23,8 @@
     color: #d60000;
     margin: 0 1rem;
 }
+
+.img-legende-co2 {
+    display: flex;
+    justify-content: center;
+}
