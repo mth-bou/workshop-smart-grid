@@ -7,6 +7,7 @@ import globe from './img/terre verte.png';
 import tete from './img/tete reflexion empreinte carbone.png';
 import speedometer from './img/speedometer.png';
 import diagramme from './img/diagramme camembert.png';
+import greenIT from './img/solutions-green-it.jpg';
 
 const Home = () => {
     return (
@@ -79,7 +80,7 @@ const Home = () => {
             <div className="block-4-container">
                 <Grid container spacing={0}>
                     <Grid xs={5}>
-                        <img style={{ maxWidth: '100%', margin: '1rem' }} src={diagramme} alt="Diagramme camembert" />
+                        <img style={{ maxWidth: '100%', height: '100%'}} src={greenIT} alt="Diagramme camembert" />
                     </Grid>
                     <Grid xs={7} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                         <p style={{ fontSize: 40, color: '#FFFFFF' }}>Maîtrisez votre bilan carbone en entreprise</p>
