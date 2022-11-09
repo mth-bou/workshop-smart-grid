@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Grid, IconButton} from "@mui/material";
 import ItemSelector from "../itemSelector/ItemSelector";
 import AddIcon from '@mui/icons-material/Add';
@@ -6,19 +6,30 @@ import {Colors} from "../../data/data";
 
 export default function Box(props) {
 
-    const [totalConsoBox, setTotalConsoBox] = useState(0)
-
     const [selectorCounter, setSelectorCounter] = useState([1])
+    const [total, setTotal] = useState({})
 
+    const [totalSum, setTotalSum] = useState(0)
+
+    useEffect(() => {
+        setTotalSum(Object.values(total).reduce((a, b) => a + b, 0))
+    }, [total])
+
+    useEffect(() => {
+        props.setTotal((prev) => ({
+            ...prev,
+            [props.id]: totalSum
+        }))
+    }, [totalSum])
 
     return (
         <Grid item xs>
             <div style={{border: 'solid', margin: 10, padding: 20, alignItems: 'center', justifyContent: 'center'}}>
                 <h5 style={styles.h2}>{props.title}</h5>
                 {
-                    selectorCounter.map(() => (
-                        <ItemSelector setSelectorCounter={setSelectorCounter} data={props.data}
-                                      setTotalConsoBox={setTotalConsoBox}/>
+                    selectorCounter.map((v, index) => (
+                        <ItemSelector key={index} id={index} setSelectorCounter={setSelectorCounter} data={props.data}
+                                      setTotal={setTotal}/>
                     ))
                 }
                 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
@@ -26,7 +37,7 @@ export default function Box(props) {
                                 style={{alignSelf: 'center', backgroundColor: Colors.primary}}><AddIcon
                         color={'green'}/></IconButton>
                 </div>
-                <p style={{fontSize: 5}}>Conso de la box : {totalConsoBox}</p>
+                <p style={{fontSize: 35}}>Conso de la box : {totalSum}</p>
             </div>
         </Grid>
     )

@@ -15,7 +15,10 @@ export default function ItemSelector(props) {
     }, [conso, quantity])
 
     useEffect(() => {
-        props.setTotalConsoBox(totalSelector)
+        props.setTotal((prev) => ({
+            ...prev,
+            [props.id]: totalSelector
+        }))
     }, [totalSelector])
 
     return (
