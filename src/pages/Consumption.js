@@ -7,7 +7,7 @@ import {allData} from "../data/data";
 const Consumption = () => {
     return (
         <div className='consumption'>
-            <Grid container style={{margin: '8%'}}>
+            <Grid container>
                 {
                     allData.map((v, i) => (
                         <Box key={i} title={Object.keys(v)[0]} data={Object.values(v)[0]}/>
