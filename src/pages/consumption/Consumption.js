@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import Box from "../component/box/Box";
+import Box from "../../component/box/Box";
 import {Grid} from "@mui/material";
-import {allData} from "../data/data";
+import {allData} from "../../data/data";
+import './Consumption.css';
 
 
 const Consumption = () => {
@@ -22,8 +23,11 @@ const Consumption = () => {
                     ))
                 }
             </Grid>
-            <div>
-                <p>TOTAL CONSO : {totalSum}</p>
+
+            <h2>Résultat de votre empreinte carbone</h2>
+
+            <div className="carbon-footprint-result">
+                <p>{totalSum}<span>kg CO2 / an</span></p>
             </div>
         </div>
     );

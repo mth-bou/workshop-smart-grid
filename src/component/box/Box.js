@@ -37,7 +37,6 @@ export default function Box(props) {
                                 style={{alignSelf: 'center', backgroundColor: Colors.primary}}><AddIcon
                         color={'green'}/></IconButton>
                 </div>
-                <p style={{fontSize: 35}}>Conso de la box : {totalSum}</p>
             </div>
         </Grid>
     )

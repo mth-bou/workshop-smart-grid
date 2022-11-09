@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "./pages/home/Home";
-import Consumption from "./pages/Consumption";
+import Consumption from "./pages/consumption/Consumption";
 import Sidebar from "./component/sidebar/Sidebar";
 
 const RootComponent = () => {

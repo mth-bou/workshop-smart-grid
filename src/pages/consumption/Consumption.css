@@ -1,0 +1,25 @@
+.carbon-footprint-result {
+    margin: 3rem auto;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #cecece;
+    padding: 3rem;
+}
+
+.consumption h2 {
+    color: #5b5b5b;
+    font-size: 40px;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.carbon-footprint-result p {
+    text-align: center;
+    font-size: 28px;
+}
+
+.carbon-footprint-result p span {
+    font-size: 30px;
+    color: #d60000;
+    margin: 0 1rem;
+}
